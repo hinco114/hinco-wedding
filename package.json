@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "element-plus": "^2.3.4",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue3-naver-maps": "^4.1.0"
   },
   "devDependencies": {
+    "@types/navermaps": "^3.6.4",
     "@unocss/preset-attributify": "^0.51.8",
     "@unocss/preset-uno": "^0.51.8",
     "@vitejs/plugin-vue": "^4.1.0",

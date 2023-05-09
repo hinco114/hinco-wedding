@@ -13,6 +13,8 @@ declare module '@vue/runtime-core' {
     Description: typeof import('./src/components/sections/Description.vue')['default']
     ElCarousel: typeof import('element-plus/es')['ElCarousel']
     ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
+    Footer: typeof import('./src/components/sections/Footer.vue')['default']
+    NMap: typeof import('./src/components/sections/NMap.vue')['default']
     Pictures: typeof import('./src/components/sections/Pictures.vue')['default']
     Subject: typeof import('./src/components/sections/Subject.vue')['default']
   }

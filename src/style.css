@@ -36,3 +36,7 @@ h1 {
 .h-full {
   height: 100%;
 }
+
+.infowindow-style {
+  padding: 5px;
+}
