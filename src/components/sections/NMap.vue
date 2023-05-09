@@ -28,8 +28,8 @@
 import { ref } from 'vue'
 import { NaverInfoWindow, NaverMap, NaverMarker } from 'vue3-naver-maps'
 
-const map = ref()
-const marker = ref()
+const map = ref<naver.maps.Map>()
+const marker = ref<naver.maps.Marker>()
 
 const mapOptions = {
   latitude: '37.2530405', // 지도 중앙 위도
@@ -37,11 +37,11 @@ const mapOptions = {
   zoom: 13,
 }
 
-const onLoadMap = mapObject => {
+const onLoadMap = (mapObject: naver.maps.Map) => {
   map.value = mapObject
 }
 
-const onLoadMarker = markerObject => {
+const onLoadMarker = (markerObject: naver.maps.Marker) => {
   marker.value = markerObject
 }
 
