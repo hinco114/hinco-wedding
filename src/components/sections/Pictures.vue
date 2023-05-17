@@ -23,7 +23,7 @@ import { ref } from 'vue'
 
 const images = ref<string[]>([])
 
-for (let i = 1; i <= 4; i++) {
+for (let i = 2; i <= 5; i++) {
   images.value.push(`/images/0${i}.jpeg`)
 }
 </script>
