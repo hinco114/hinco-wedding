@@ -35,6 +35,15 @@ const mapOptions = {
   latitude: '37.2530405', // 지도 중앙 위도
   longitude: '127.0395801', // 지도 중앙 경도
   zoom: 13,
+  draggable: false,
+  scrollWheel: false,
+  disableDoubleClickZoom: true,
+  disableDoubleTapZoom: true,
+  disableTwoFingerTapZoom: true,
+  logoControl: false,
+  mapDataControl: false,
+  pinchZoom: false,
+  scaleControl: false,
 }
 
 const onLoadMap = (mapObject: naver.maps.Map) => {
