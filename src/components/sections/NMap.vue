@@ -1,6 +1,5 @@
 <template>
   <div class="flex-col b-rd m-10">
-    <h2 class="m-a">오시는 길</h2>
     <naver-map
       class="w-full h-100 m-t-2"
       :mapOptions="mapOptions"

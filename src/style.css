@@ -25,10 +25,25 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'JSArirang-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirang-RegularA1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'omyu_pretty';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   display: flex;
   place-items: normal start;
+  background: #e7e5e4;
 }
 
 h1 {
