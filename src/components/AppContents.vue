@@ -2,7 +2,6 @@
   <Subject />
   <Description />
   <Flicker />
-  <Date />
   <NMap />
   <Footer />
 </template>
@@ -13,5 +12,4 @@ import Description from './sections/Description.vue'
 import NMap from './sections/NMap.vue'
 import Footer from './sections/Footer.vue'
 import Flicker from './sections/Flicker.vue'
-import Date from './sections/Date.vue'
 </script>

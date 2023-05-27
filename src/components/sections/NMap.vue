@@ -1,7 +1,12 @@
 <template>
-  <div class="flex-col b-rd m-10">
+  <div class="m-a m-b-10">
+    <VerticalLine />
+    <p class="text-center text-8 m-b-2">장소 안내</p>
+    <div class="m-a m-b-3 h-1px w-full max-w-120px bg-black"></div>
+  </div>
+  <div class="w-90 b-rd m-a">
     <naver-map
-      class="w-full h-100 m-t-2"
+      class="w-f h-50"
       :mapOptions="mapOptions"
       @onLoad="onLoadMap($event)"
     >
@@ -26,6 +31,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NaverInfoWindow, NaverMap, NaverMarker } from 'vue3-naver-maps'
+import VerticalLine from '../utils/VerticalLine.vue'
 
 const map = ref<naver.maps.Map>()
 const marker = ref<naver.maps.Marker>()
