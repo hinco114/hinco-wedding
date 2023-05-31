@@ -1,12 +1,6 @@
 <template>
-  <div class="bg-yellow-100 pt-1 pb-10">
-    <VerticalLine />
-    <div class="m-a mt-10">
-      <p class="text-center text-8 m-b-2">사진첩</p>
-      <div class="m-a m-b-3 h-1px w-full max-w-90px bg-black"></div>
-    </div>
+  <div class="m-3">
     <Flicking
-      class="h-500px rounded m-5"
       :options="{
         align: 'center',
         circular: true,
@@ -18,19 +12,22 @@
       :plugins="plugins"
     >
       <img
-        class="h-full w-full rounded object-contain"
+        class="h-full w-full rounded object-contain m-a ml-1 mr-1"
         v-for="item in images"
         :key="item"
         :src="item"
       />
+      <template #viewport>
+        <div class="flicking-pagination"></div>
+      </template>
     </Flicking>
   </div>
 </template>
 <script setup>
 import Flicking from '@egjs/vue3-flicking'
-import { AutoPlay } from '@egjs/flicking-plugins'
+import { AutoPlay, Pagination } from '@egjs/flicking-plugins'
 import { ref } from 'vue'
-import VerticalLine from '../utils/VerticalLine.vue'
+import '@egjs/flicking-plugins/dist/pagination.css'
 
 const plugins = [
   new AutoPlay({
@@ -38,6 +35,7 @@ const plugins = [
     direction: 'NEXT',
     stopOnHover: false,
   }),
+  new Pagination({ type: 'bullet' }),
 ]
 const images = ref([])
 
