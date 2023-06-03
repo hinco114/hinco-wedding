@@ -5,14 +5,14 @@
         align: 'center',
         circular: true,
         panelsPerView: 1,
-        autoResize: false,
+        autoResize: true,
         duration: 500,
         moveType: 'strict',
       }"
       :plugins="plugins"
     >
       <img
-        class="h-full w-full rounded object-contain m-a ml-1 mr-1"
+        class="h-full w-full rounded object-contain m-a"
         v-for="item in images"
         :key="item"
         :src="item"
