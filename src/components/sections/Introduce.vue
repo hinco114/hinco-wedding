@@ -33,7 +33,7 @@
   <div>
     <img
       class="w-full"
-      src="/images/001.jpg"
+      src="/images/01.jpg"
       alt="third-image"
     />
   </div>

@@ -12,7 +12,7 @@
 import { ref } from 'vue'
 
 const images = ref([])
-for (let i = 1; i <= 4; i++) {
-  if (i < 10) images.value.push(`/images/straight/0${i}.jpg`)
+for (let i = 2; i <= 4; i++) {
+  if (i < 10) images.value.push(`/images/0${i}.jpg`)
 }
 </script>

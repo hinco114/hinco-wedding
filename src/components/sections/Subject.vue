@@ -9,7 +9,7 @@
     </div>
     <img
       class="w-full rounded"
-      src="/images/000.jpg"
+      src="/images/00.jpg"
       alt="first-image"
     />
   </div>
