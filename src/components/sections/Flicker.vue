@@ -39,7 +39,7 @@ const plugins = [
 ]
 const images = ref([])
 
-for (let i = 1; i <= 9; i++) {
+for (let i = 1; i <= 8; i++) {
   if (i < 10) images.value.push(`/images/gallery/0${i}.jpg`)
   else images.value.push(`/images/gallery/${i}.jpg`)
 }
