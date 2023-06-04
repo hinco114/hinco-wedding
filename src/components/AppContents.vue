@@ -1,10 +1,17 @@
 <template>
   <Subject />
-  <Introduce />
-  <Description />
+  <Introduce
+    :information="information"
+    :contents="contents"
+  />
+  <Description :content="descriptionStrings" />
   <StraightPictures />
   <Flicker />
-  <NMap />
+  <NMap
+    :date-string="dateString"
+    :map-options="mapOptions"
+    :map-info="mapInfo"
+  />
   <BankAccount :bankAccounts="bankAccounts" />
   <Footer />
 </template>
@@ -18,6 +25,30 @@ import Flicker from './sections/Flicker.vue'
 import Introduce from './sections/Introduce.vue'
 import StraightPictures from './sections/StraightPictures.vue'
 import BankAccount from './sections/BankAccount.vue'
+
+const dateString = '2023년 7월 7일 금요일 오전 10시'
+const locationString = '천주교 수원 권선동성당'
+const descriptionStrings = ['성당에서 가족끼리 조용히 예식을 진행할 예정입니다.']
+const contents = [dateString, locationString]
+
+const information = {
+  groom: {
+    name: '윤상현',
+    parents: {
+      father: '윤중한',
+      mother: '장인경',
+    },
+    relation: '장남',
+  },
+  bride: {
+    name: '임성은',
+    parents: {
+      father: '임좌상',
+      mother: '이현진',
+    },
+    relation: '장녀',
+  },
+}
 
 const bankAccounts = {
   groom: [
@@ -39,5 +70,25 @@ const bankAccounts = {
       bank: '1002-748-145813',
     },
   ],
+}
+
+const mapOptions = {
+  latitude: '37.2530405', // 지도 중앙 위도
+  longitude: '127.0395801', // 지도 중앙 경도
+  zoom: 13,
+  draggable: false,
+  scrollWheel: false,
+  disableDoubleClickZoom: true,
+  disableDoubleTapZoom: true,
+  disableTwoFingerTapZoom: true,
+  logoControl: false,
+  mapDataControl: false,
+  pinchZoom: false,
+  scaleControl: false,
+}
+
+const mapInfo = {
+  name: '권선동 성당',
+  url: 'https://naver.me/xFpoOwe1',
 }
 </script>

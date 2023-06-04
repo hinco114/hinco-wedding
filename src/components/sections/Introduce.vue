@@ -2,32 +2,31 @@
   <div class="pt-30 pb-30">
     <div class="flex flex-col font-mapo">
       <div class="flex flex-row justify-center gap-23">
-        <div class="flex flex-col gap-2">
+        <div
+          v-for="key in Object.keys(information)"
+          class="flex flex-col gap-2"
+        >
           <div class="flex flex-col write-vertical-left text-5">
-            <span>윤중한</span>
-            <span>장인경</span>
+            <span>{{ information[key].parents.father }}</span>
+            <span>{{ information[key].parents.mother }}</span>
           </div>
           <div class="write-normal mt-4">의</div>
-          <div class="write-normal mt-1 text-5">장남</div>
-        </div>
-        <div class="flex flex-col gap-2">
-          <div class="flex flex-col write-vertical-left text-5">
-            <span>임좌상</span>
-            <span>이현진</span>
-          </div>
-          <div class="write-normal mt-4">의</div>
-          <div class="write-normal mt-1 text-5">장녀</div>
+          <div class="write-normal mt-1 text-5">{{ information[key].relation }}</div>
         </div>
       </div>
       <div class="flex flex-row justify-center gap-5 text-7 mt-10 mb-10">
-        <span>윤상현</span>
+        <span>{{ information.groom.name }}</span>
         <span>&</span>
-        <span>임성은</span>
+        <span>{{ information.bride.name }}</span>
       </div>
     </div>
 
-    <p class="font-mapo">2023년 7월 7일 금요일 오전 10시</p>
-    <p class="font-mapo">천주교 수원 권선동성당</p>
+    <p
+      v-for="content in contents"
+      class="font-mapo"
+    >
+      {{ content }}
+    </p>
   </div>
 
   <div>
@@ -38,4 +37,30 @@
     />
   </div>
 </template>
-<script setup></script>
+<script setup>
+defineProps({
+  information: {
+    groom: {
+      name: String,
+      parents: {
+        father: String,
+        mother: String,
+      },
+      relation: String,
+    },
+    bride: {
+      name: String,
+      parents: {
+        father: String,
+        mother: String,
+      },
+      relation: String,
+    },
+    required: true,
+  },
+  contents: {
+    type: [Array],
+    required: true,
+  },
+})
+</script>
