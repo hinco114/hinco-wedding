@@ -11,7 +11,7 @@
 <script setup lang="ts">
 defineProps({
   content: {
-    type: Array[String],
+    type: Array<String>,
     required: true,
   },
 })

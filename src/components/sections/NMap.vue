@@ -59,6 +59,7 @@ const props = defineProps({
   },
 })
 
+// @ts-ignore
 const { mapOptions } = normalizeProps(props)
 const lat = ref(Number(mapOptions.latitude))
 const lng = ref(Number(mapOptions.longitude))

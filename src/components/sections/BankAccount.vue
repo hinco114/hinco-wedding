@@ -20,7 +20,7 @@
             <div class="flex flex-col gap-3">
               <div
                 class="flex flex-row"
-                v-for="(account, index) in props.bankAccounts?.groom?.map(account => account)"
+                v-for="account in props.bankAccounts?.groom"
               >
                 <span class="ml-5 mr-3">{{ account.name }}</span>
                 <span class="mr-3">{{ account.account }}</span>
@@ -33,7 +33,7 @@
             <div class="flex flex-col gap-3">
               <div
                 class="flex flex-row"
-                v-for="(account, index) in props.bankAccounts?.bride?.map(account => account)"
+                v-for="account in props.bankAccounts?.bride"
               >
                 <span class="ml-5 mr-3">{{ account.name }}</span>
                 <span class="mr-3">{{ account.account }}</span>
@@ -84,7 +84,7 @@ const closeModal = () => {
   openModalVar.value = false
 }
 
-const handleOutsideClick = event => {
+const handleOutsideClick = (event: Event) => {
   // 바깥 영역 클릭시 close 처리
   if (event.target === event.currentTarget) {
     closeModal()

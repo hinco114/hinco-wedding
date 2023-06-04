@@ -8,11 +8,15 @@
   <StraightPictures />
   <Flicker />
   <NMap
+    v-if="!hideDetails"
     :date-string="dateString"
     :map-options="mapOptions"
     :map-info="mapInfo"
   />
-  <BankAccount :bankAccounts="bankAccounts" />
+  <BankAccount
+    v-if="!hideDetails"
+    :bankAccounts="bankAccounts"
+  />
   <Footer />
 </template>
 
@@ -25,11 +29,18 @@ import Flicker from './sections/Flicker.vue'
 import Introduce from './sections/Introduce.vue'
 import StraightPictures from './sections/StraightPictures.vue'
 import BankAccount from './sections/BankAccount.vue'
+import { ref } from 'vue'
+
+const hostname = ref(window.location.hostname)
+const hideDetails = ref(hostname.value === 'wedding.hinco.dev')
 
 const dateString = '2023년 7월 7일 금요일 오전 10시'
 const locationString = '천주교 수원 권선동성당'
 const descriptionStrings = ['성당에서 가족끼리 조용히 예식을 진행할 예정입니다.']
-const contents = [dateString, locationString]
+let contents = [dateString, locationString]
+if (hideDetails.value) {
+  contents = []
+}
 
 const information = {
   groom: {
