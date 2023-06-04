@@ -1,35 +1,17 @@
 <template>
-  <div class="p-t-15">
-    <div class="bg-yellow-100">
-      <div class="arch-image m-a">
-        <img
-          class="w-350px rounded"
-          src="/images/000.jpeg"
-          alt="first-image"
-        />
+  <div>
+    <div class="pt-30 pb-30">
+      <div class="m-a mb-10 h-1px w-full max-w-90px bg-black"></div>
+      <div class="flex flex-col justify-center m-a write-vertical-left text-left text-5">
+        <div>우리</div>
+        <div>결혼합니다</div>
       </div>
     </div>
-
-    <VerticalLine />
-
-    <div class="m-a m-b-10">
-      <img
-        class="w-350px rounded"
-        src="/images/001.jpeg"
-        alt="second-image"
-      />
-    </div>
-
-    <VerticalLine />
-    <div class="m-a">
-      <img
-        class="w-350px rounded"
-        src="/images/002.jpeg"
-        alt="third-image"
-      />
-    </div>
+    <img
+      class="w-full rounded"
+      src="/images/000.jpg"
+      alt="first-image"
+    />
   </div>
 </template>
-<script setup>
-import VerticalLine from '../utils/VerticalLine.vue'
-</script>
+<script setup></script>

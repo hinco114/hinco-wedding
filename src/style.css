@@ -17,11 +17,21 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MapoGoldenPier';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-mapo {
+  font-family: 'MapoGoldenPier';
+}
+
 body {
   margin: 0;
   display: flex;
   place-items: normal start;
-  background: #fef9c3;
 }
 
 h1 {
@@ -47,29 +57,4 @@ h1 {
 
 .infowindow-style {
   padding: 5px;
-}
-
-.diagonal-line {
-  width: 150px;
-  height: 0;
-  border-top: 1px black solid;
-  transform: rotate(-45deg);
-}
-
-.arch-image {
-  width: 300px;
-  height: 450px;
-  overflow: hidden;
-  clip-path: ellipse(50% 50% at 50% 50%);
-}
-
-.arch-image img {
-  width: 100%;
-  height: auto;
-}
-
-.vertical-line {
-  width: 1px;
-  height: 200px;
-  border-left: 2px dotted;
 }
