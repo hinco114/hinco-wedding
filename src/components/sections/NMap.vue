@@ -6,7 +6,7 @@
     </div>
 
     <div class="text-center pb-5">
-      <p class="font-mapo">2023년 7월 7일 금요일 오전 10시</p>
+      <p>2023년 7월 7일 금요일 오전 10시</p>
     </div>
 
     <div class="m-a pl-10 pr-10">
