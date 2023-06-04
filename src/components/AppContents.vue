@@ -4,7 +4,7 @@
   <Description />
   <StraightPictures />
   <Flicker />
-  <Contact />
+  <!--  <Contact />-->
   <NMap />
   <Footer />
 </template>
