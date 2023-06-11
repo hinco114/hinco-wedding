@@ -36,7 +36,10 @@ const hideDetails = ref(hostname.value === 'wedding.hinco.dev')
 
 const dateString = '2023년 7월 7일 금요일 오전 10시'
 const locationString = '천주교 수원 권선동성당'
-const descriptionStrings = ['신부님의 주례로 가족들만 모여 혼배성사 합니다.']
+const descriptionStrings = [
+  '예식은 직계 가족만 모여 혼배미사로 진행됩니다.',
+  '하느님의 뜻대로 진정한 사랑과 신의로 살아갈 수 있도록 축하와 격려 부탁드립니다.',
+]
 let contents = [dateString, locationString]
 if (hideDetails.value) {
   contents = []
@@ -49,7 +52,7 @@ const information = {
       father: '윤중한',
       mother: '장인경',
     },
-    relation: '장남',
+    relation: '아들',
   },
   bride: {
     name: '임성은',
@@ -57,7 +60,7 @@ const information = {
       father: '임좌상',
       mother: '이현진',
     },
-    relation: '장녀',
+    relation: '딸',
   },
 }
 

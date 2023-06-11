@@ -3,7 +3,12 @@
     <p class="text-center text-6 mb-1">안내말씀</p>
     <div class="m-a h-1px w-full max-w-85px bg-black"></div>
     <div class="text-center mt-5">
-      <p v-for="line in content">{{ line }}</p>
+      <p
+        class="m-a max-w-300px pb-2"
+        v-for="line in content"
+      >
+        {{ line }}
+      </p>
     </div>
   </div>
 </template>
