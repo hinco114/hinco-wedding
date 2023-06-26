@@ -69,7 +69,7 @@ const bankAccounts = {
     {
       name: '윤중한',
       account: '국민은행',
-      bank: '201-21-1109361',
+      bank: '204-21-1109361',
     },
     {
       name: '윤상현',
