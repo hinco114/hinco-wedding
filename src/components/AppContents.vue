@@ -34,7 +34,7 @@ import { ref } from 'vue'
 const hostname = ref(window.location.hostname)
 const hideDetails = ref(hostname.value === 'wedding.hinco.dev')
 
-const dateString = '2023년 7월 7일 금요일 오전 10시'
+const dateString = '2023년 9월 16일 토요일 오전 10시'
 const locationString = '천주교 수원 권선동성당'
 const descriptionStrings = [
   '예식은 직계 가족만 모여 혼배미사로 진행됩니다.',
