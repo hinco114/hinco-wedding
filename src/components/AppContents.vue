@@ -31,8 +31,9 @@ import StraightPictures from './sections/StraightPictures.vue'
 import BankAccount from './sections/BankAccount.vue'
 import { ref } from 'vue'
 
-const hostname = ref(window.location.hostname)
-const hideDetails = ref(hostname.value === 'wedding.hinco.dev')
+// const hostname = ref(window.location.hostname)
+// const hideDetails = ref(hostname.value === 'wedding.hinco.dev')
+const hideDetails = ref(false)
 
 const dateString = '2023년 9월 16일 토요일 오전 10시'
 const locationString = '천주교 수원 권선동성당'
